@@ -74,7 +74,7 @@ const Home = () => {
           {/* Conducted By Section */}
           <div className="flex items-center space-x-3 group">
             <div className="text-right">
-              <p className="text-gray-300 text-sm font-medium drop-shadow-md">Conducted by</p>
+              <p className="text-gray-300 text-sm font-medium drop-shadow-md">Directed by</p>
               <p className="text-yellow-400 font-bold text-lg drop-shadow-lg">Ranjith Senarathne</p>
             </div>
             <div className="relative">

@@ -9,10 +9,10 @@ const About = () => {
 
   // Gallery images array
   const galleryImages = [
-    { src: "/images/spic1.jpg", alt: "O/L Students" },
+    { src: "/images/spic4.jpg", alt: "O/L Students" },
     { src: "/images/spic2.jpg", alt: "A/L Students" },
     { src: "/images/spic3.jpg", alt: "O/L Class" },
-    { src: "/images/spic4.jpg", alt: "A/L Class" },
+    { src: "/images/spic1.jpg", alt: "A/L Class" },
     { src: "/images/spic5.jpg", alt: "Mathematics Class" },
     { src: "/images/spic6.jpg", alt: "Science Class" },
     { src: "/images/spic7.jpg", alt: "Results Day" },

@@ -46,7 +46,7 @@ const Contact = () => {
           </h1>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6 rounded-full"></div>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
-            Ready to transform your health journey? We're here to help you every step of the way.
+            Ready to transform your Education journey? We're here to help you every step of the way.
           </p>
         </div>
 
@@ -77,7 +77,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">Call Us</h3>
-                    <p className="text-gray-300">+1 (555) 123-4567</p>
+                    <p className="text-gray-300">+94 71 065 6082</p>
                   </div>
                 </div>
 
@@ -89,7 +89,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">Visit Us</h3>
-                    <p className="text-gray-300">123 Health Street, Wellness City</p>
+                    <p className="text-gray-300">Pitakotte,Sri Lanka</p>
                   </div>
                 </div>
               </div>
@@ -214,7 +214,7 @@ const Contact = () => {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center space-x-2 text-gray-400">
             <div className="w-8 h-px bg-gradient-to-r from-transparent to-yellow-400"></div>
-            <span className="text-sm">SEHAS Health Solutions</span>
+            <span className="text-sm">SEHAS Institute - Pitakotte</span>
             <div className="w-8 h-px bg-gradient-to-l from-transparent to-yellow-400"></div>
           </div>
         </div>

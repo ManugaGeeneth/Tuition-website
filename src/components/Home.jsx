@@ -45,84 +45,135 @@ const Home = () => {
         ))}
       </div>
 
-      {/* Logo Section with Enhanced Animation - Adjusted for navbar */}
-      <div className="absolute top-20 left-6 flex items-center space-x-4 cursor-pointer select-none z-20 group">
-        <div className="relative">
-          <div className="absolute inset-0 bg-yellow-400 rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-300 animate-pulse" style={{filter: 'blur(8px)'}}></div>
-          <img
-            src="/images/sehas-logo.png"
-            alt="SEHAS Logo"
-            className="relative h-16 w-16 object-contain animate-logoFloat group-hover:scale-110 transition-transform duration-300"
-          />
-        </div>
-        <div className="flex flex-col items-start">
-          <span className="text-yellow-400 font-extrabold text-3xl tracking-wide drop-shadow-lg">
-            SEHAS
-          </span>
-          <span className="text-gray-300 text-sm font-medium tracking-wider opacity-90 drop-shadow-md">
-            EXCELLENCE IN EDUCATION
-          </span>
-        </div>
-      </div>
+      {/* Header Section - Mobile Responsive */}
+      <div className="absolute top-4 left-0 right-0 z-20 px-4">
+        {/* Desktop Layout */}
+        <div className="hidden md:flex justify-between items-center">
+          {/* Logo Section */}
+          <div className="flex items-center space-x-4 cursor-pointer select-none group">
+            <div className="relative">
+              <div className="absolute inset-0 bg-yellow-400 rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-300 animate-pulse" style={{filter: 'blur(8px)'}}></div>
+              <img
+                src="/images/sehas-logo.png"
+                alt="SEHAS Logo"
+                className="relative h-16 w-16 object-contain animate-logoFloat group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="flex flex-col items-start">
+              <span className="text-yellow-400 font-extrabold text-3xl tracking-wide drop-shadow-lg">
+                SEHAS
+              </span>
+              <span className="text-gray-300 text-sm font-medium tracking-wider opacity-90 drop-shadow-md">
+                EXCELLENCE IN EDUCATION
+              </span>
+            </div>
+          </div>
 
-      {/* Conducted By Section - Adjusted for navbar */}
-      <div className="absolute top-20 right-6 flex items-center space-x-3 z-20 group">
-        <div className="text-right">
-          <p className="text-gray-300 text-sm font-medium drop-shadow-md">Conducted by</p>
-          <p className="text-yellow-400 font-bold text-lg drop-shadow-lg">Ranjith Senarathne</p>
+          {/* Conducted By Section */}
+          <div className="flex items-center space-x-3 group">
+            <div className="text-right">
+              <p className="text-gray-300 text-sm font-medium drop-shadow-md">Conducted by</p>
+              <p className="text-yellow-400 font-bold text-lg drop-shadow-lg">Ranjith Senarathne</p>
+            </div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-yellow-400 rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-300 animate-pulse" style={{filter: 'blur(6px)'}}></div>
+              <img
+                src="/images/ranjithsir1.jpg"
+                alt="Ranjith Senarathne"
+                className="relative w-12 h-12 object-cover rounded-full shadow-lg group-hover:scale-110 transition-transform duration-300 border-2 border-yellow-400/20"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <div className="relative w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full items-center justify-center shadow-lg border-2 border-yellow-400/20 hidden">
+                <span className="text-black font-bold text-sm">RS</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="relative">
-          <div className="absolute inset-0 bg-yellow-400 rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-300 animate-pulse" style={{filter: 'blur(6px)'}}></div>
-          <img
-            src="/images/ranjithsir1.jpg"
-            alt="Ranjith Senarathne"
-            className="relative w-12 h-12 object-cover rounded-full shadow-lg group-hover:scale-110 transition-transform duration-300 border-2 border-yellow-400/20"
-            onError={(e) => {
-              // Fallback to initials if image fails to load
-              e.target.style.display = 'none';
-              e.target.nextSibling.style.display = 'flex';
-            }}
-          />
-          <div className="relative w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full items-center justify-center shadow-lg border-2 border-yellow-400/20 hidden">
-            <span className="text-black font-bold text-sm">RS</span>
+
+        {/* Mobile Layout - Stacked */}
+        <div className="md:hidden flex flex-col space-y-4">
+          {/* Logo Section - Mobile */}
+          <div className="flex items-center justify-center space-x-3 cursor-pointer select-none group">
+            <div className="relative">
+              <div className="absolute inset-0 bg-yellow-400 rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-300 animate-pulse" style={{filter: 'blur(6px)'}}></div>
+              <img
+                src="/images/sehas-logo.png"
+                alt="SEHAS Logo"
+                className="relative h-12 w-12 object-contain animate-logoFloat group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="flex flex-col items-start">
+              <span className="text-yellow-400 font-extrabold text-2xl tracking-wide drop-shadow-lg">
+                SEHAS
+              </span>
+              <span className="text-gray-300 text-xs font-medium tracking-wider opacity-90 drop-shadow-md">
+                EXCELLENCE IN EDUCATION
+              </span>
+            </div>
+          </div>
+
+          {/* Conducted By Section - Mobile */}
+          <div className="flex items-center justify-center space-x-3 group">
+            <div className="text-center">
+              <p className="text-gray-300 text-xs font-medium drop-shadow-md">Conducted by</p>
+              <p className="text-yellow-400 font-bold text-sm drop-shadow-lg">Ranjith Senarathne</p>
+            </div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-yellow-400 rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-300 animate-pulse" style={{filter: 'blur(4px)'}}></div>
+              <img
+                src="/images/ranjithsir1.jpg"
+                alt="Ranjith Senarathne"
+                className="relative w-10 h-10 object-cover rounded-full shadow-lg group-hover:scale-110 transition-transform duration-300 border-2 border-yellow-400/20"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <div className="relative w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full items-center justify-center shadow-lg border-2 border-yellow-400/20 hidden">
+                <span className="text-black font-bold text-xs">RS</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Main Content with Staggered Animations */}
-      <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+      {/* Main Content with Staggered Animations - Adjusted spacing for mobile */}
+      <div className={`transform transition-all duration-1000 mt-32 md:mt-0 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
         
         {/* Decorative Elements */}
         <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent animate-slideInFromTop"></div>
         
-        {/* Main Heading with Text Effects */}
-        <h1 className="relative text-5xl md:text-7xl font-extrabold mb-8 z-10">
+        {/* Main Heading with Text Effects - Responsive text sizes */}
+        <h1 className="relative text-4xl md:text-7xl font-extrabold mb-8 z-10">
           <span className="inline-block animate-bounceInWords text-yellow-400 drop-shadow-lg" style={{animationDelay: '0.1s'}}>Welcome</span>
-          <span className="inline-block animate-bounceInWords mx-3 text-yellow-400 drop-shadow-lg" style={{animationDelay: '0.2s'}}>to</span>
+          <span className="inline-block animate-bounceInWords mx-2 md:mx-3 text-yellow-400 drop-shadow-lg" style={{animationDelay: '0.2s'}}>to</span>
           <span className="inline-block animate-bounceInWords text-yellow-400 drop-shadow-lg" style={{animationDelay: '0.3s'}}>SEHAS</span>
           <br />
-          <span className="inline-block animate-bounceInWords text-4xl md:text-5xl mt-2 text-yellow-400 drop-shadow-lg" style={{animationDelay: '0.4s'}}>Pitakotte</span>
+          <span className="inline-block animate-bounceInWords text-3xl md:text-5xl mt-2 text-yellow-400 drop-shadow-lg" style={{animationDelay: '0.4s'}}>Pitakotte</span>
           
           {/* Animated Underline */}
           <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-yellow-400 animate-expandLine shadow-lg"></div>
         </h1>
 
-        {/* Enhanced Description */}
+        {/* Enhanced Description - Responsive text */}
         <div className="relative mb-12">
-          <p className="text-xl md:text-2xl max-w-3xl text-gray-200 animate-fadeInUp leading-relaxed drop-shadow-lg" style={{animationDelay: '0.6s'}}>
+          <p className="text-lg md:text-2xl max-w-3xl text-gray-200 animate-fadeInUp leading-relaxed drop-shadow-lg px-4" style={{animationDelay: '0.6s'}}>
             Your trusted tuition institute for 
             <span className="text-yellow-400 font-semibold drop-shadow-md"> excellence </span>
             in academics
           </p>
-          <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-60 shadow-lg"></div>
-          <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-60 shadow-lg" style={{animationDelay: '0.5s'}}></div>
+          <div className="absolute -left-2 md:-left-4 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-60 shadow-lg"></div>
+          <div className="absolute -right-2 md:-right-4 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-60 shadow-lg" style={{animationDelay: '0.5s'}}></div>
         </div>
 
-        {/* Enhanced Call-to-Action Button */}
+        {/* Enhanced Call-to-Action Button - Responsive padding */}
         <div className="relative group">
           <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full opacity-20 group-hover:opacity-30 transition-all duration-300 animate-pulse" style={{filter: 'blur(10px)'}}></div>
-          <button className="relative bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold px-12 py-4 rounded-full shadow-2xl hover:from-yellow-300 hover:to-yellow-400 transform hover:scale-105 transition-all duration-300 animate-buttonEntrance group-hover:shadow-yellow-400/30" style={{animationDelay: '0.8s'}}>
-            <span className="relative z-10 text-lg tracking-wide drop-shadow-sm">Enroll Now</span>
+          <button className="relative bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold px-8 md:px-12 py-3 md:py-4 rounded-full shadow-2xl hover:from-yellow-300 hover:to-yellow-400 transform hover:scale-105 transition-all duration-300 animate-buttonEntrance group-hover:shadow-yellow-400/30" style={{animationDelay: '0.8s'}}>
+            <span className="relative z-10 text-base md:text-lg tracking-wide drop-shadow-sm">Enroll Now</span>
             <div className="absolute inset-0 bg-white rounded-full opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
           </button>
         </div>
@@ -132,10 +183,10 @@ const Home = () => {
       </div>
 
       {/* Floating Action Elements */}
-      <div className="absolute bottom-10 left-10 animate-bounce">
+      <div className="absolute bottom-10 left-4 md:left-10 animate-bounce">
         <div className="w-3 h-3 bg-yellow-400 rounded-full opacity-60"></div>
       </div>
-      <div className="absolute bottom-20 right-10 animate-bounce" style={{animationDelay: '0.5s'}}>
+      <div className="absolute bottom-20 right-4 md:right-10 animate-bounce" style={{animationDelay: '0.5s'}}>
         <div className="w-2 h-2 bg-yellow-400 rounded-full opacity-40"></div>
       </div>
 

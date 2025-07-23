@@ -120,7 +120,7 @@ const Home = () => {
           {/* Conducted By Section - Mobile */}
           <div className="flex items-center justify-center space-x-3 group">
             <div className="text-center">
-              <p className="text-gray-300 text-xs font-medium drop-shadow-md">Conducted by</p>
+              <p className="text-gray-300 text-xs font-medium drop-shadow-md">Directed by</p>
               <p className="text-yellow-400 font-bold text-sm drop-shadow-lg">Ranjith Senarathne</p>
             </div>
             <div className="relative">

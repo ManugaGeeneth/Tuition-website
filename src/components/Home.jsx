@@ -45,10 +45,12 @@ const Home = () => {
         ))}
       </div>
 
-      {/* Header Section - Mobile Responsive */}
-      <div className="absolute top-4 left-0 right-0 z-20 px-4">
+      
+
+      {/* Logo and Conducted By Section - Moved below navbar */}
+      <div className="absolute top-20 left-0 right-0 z-40 px-4 py-6">
         {/* Desktop Layout */}
-        <div className="hidden md:flex justify-between items-center">
+        <div className="hidden md:flex justify-between items-center max-w-7xl mx-auto">
           {/* Logo Section */}
           <div className="flex items-center space-x-4 cursor-pointer select-none group">
             <div className="relative">
@@ -94,7 +96,7 @@ const Home = () => {
         </div>
 
         {/* Mobile Layout - Stacked */}
-        <div className="md:hidden flex flex-col space-y-4">
+        <div className="md:hidden flex flex-col space-y-3 max-w-sm mx-auto">
           {/* Logo Section - Mobile */}
           <div className="flex items-center justify-center space-x-3 cursor-pointer select-none group">
             <div className="relative">
@@ -102,11 +104,11 @@ const Home = () => {
               <img
                 src="/images/sehas-logo.png"
                 alt="SEHAS Logo"
-                className="relative h-12 w-12 object-contain animate-logoFloat group-hover:scale-110 transition-transform duration-300"
+                className="relative h-10 w-10 object-contain animate-logoFloat group-hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="flex flex-col items-start">
-              <span className="text-yellow-400 font-extrabold text-2xl tracking-wide drop-shadow-lg">
+              <span className="text-yellow-400 font-extrabold text-xl tracking-wide drop-shadow-lg">
                 SEHAS
               </span>
               <span className="text-gray-300 text-xs font-medium tracking-wider opacity-90 drop-shadow-md">
@@ -126,13 +128,13 @@ const Home = () => {
               <img
                 src="/images/ranjithsir1.jpg"
                 alt="Ranjith Senarathne"
-                className="relative w-10 h-10 object-cover rounded-full shadow-lg group-hover:scale-110 transition-transform duration-300 border-2 border-yellow-400/20"
+                className="relative w-8 h-8 object-cover rounded-full shadow-lg group-hover:scale-110 transition-transform duration-300 border-2 border-yellow-400/20"
                 onError={(e) => {
                   e.target.style.display = 'none';
                   e.target.nextSibling.style.display = 'flex';
                 }}
               />
-              <div className="relative w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full items-center justify-center shadow-lg border-2 border-yellow-400/20 hidden">
+              <div className="relative w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full items-center justify-center shadow-lg border-2 border-yellow-400/20 hidden">
                 <span className="text-black font-bold text-xs">RS</span>
               </div>
             </div>
@@ -140,8 +142,8 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Main Content with Staggered Animations - Adjusted spacing for mobile */}
-      <div className={`transform transition-all duration-1000 mt-32 md:mt-0 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+      {/* Main Content with Staggered Animations */}
+      <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
         
         {/* Decorative Elements */}
         <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent animate-slideInFromTop"></div>

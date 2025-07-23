@@ -1,25 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import About from "./components/About";
+import Teachers from "./components/Teachers";
+import Subjects from "./components/Subjects";
+import Contact from "./components/Contact";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-black text-gray-300">
+      <Navbar />
+      
+      {/* Enhanced Home Section */}
+      <section id="home">
+        <Home />
+      </section>
+
+      {/* About Section */}
+      <section id="about" >
+        <About/>
+      </section>
+
+      {/* Teachers Section */}
+      <section id="teachers">
+        <Teachers/>
+      </section>
+
+      {/* Subjects Section */}
+      <section id="subjects" >
+        <Subjects/>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" >
+        <Contact/>
+      </section>
+
+      {/* Enhanced Animations */}
+      <style jsx>{`
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(40px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .animate-fadeInUp {
+          animation: fadeInUp 0.8s ease-out forwards;
+          opacity: 0;
+        }
+        
+        html {
+          scroll-behavior: smooth;
+        }
+      `}</style>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,3 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1f2937; /* gray-800 */
+}
+::-webkit-scrollbar-thumb {
+  background-color: #facc15; /* yellow */
+  border-radius: 10px;
+}
 .App {
   text-align: center;
 }
